@@ -470,16 +470,16 @@
             }
             
             //Dropped out function
-            // if(panjangStudy == 0){
-            //     noStudy += 1;
-            //     if(noStudy == 15){
-            //         alert("You will be dropped out soon! So please do you homework!");   
-            //     }
-            //     if(noStudy == 25){
-            //         alert("You just got dropped out! Sorry :)");
-            //         window.location.href = 'theDroppedout.html';
-            //     }
-            // }
+            if(panjangStudy == 0){
+                noStudy += 1;
+                if(noStudy == 15){
+                    alert("You will be dropped out soon! So please do you homework!");   
+                }
+                if(noStudy == 25){
+                    alert("You just got dropped out! Sorry :)");
+                    window.location.href = 'theDroppedout.html';
+                }
+            }
             money += 10;
             $("#money").html(`<p><b>Money</b>: $${money}</p>`);
             
@@ -530,11 +530,11 @@
         }
 
         //Time settings for the progress bars
-        // setInterval(kurangEat, 1000);
-        // setInterval(kurangPlay, 1000);
-        // setInterval(kurangRomance, 10000);
-        // setInterval(kurangSleep, 1000);
-        // setInterval(kurangStudy, 15000);
+        setInterval(kurangEat, 1000);
+        setInterval(kurangPlay, 1000);
+        setInterval(kurangRomance, 10000);
+        setInterval(kurangSleep, 1000);
+        setInterval(kurangStudy, 15000);
 
         function kurangEat(){
             let selisih = 0.15;
@@ -653,10 +653,6 @@
         buttonEat.click(function(){
             let selisih = 6;
             let nambah = 3;
-            //money -= 10;
-            //detik += 30;
-            //panjangSleep -= selisih;
-
             
             if(detik >= 60){
                 detik -= 60;
@@ -668,6 +664,7 @@
             if(money <= 0){
                 alert(`You are running out of money! Please use your money wisely! Otherwise you will go bankrupt`);
             }
+
             // Avatar settings
             if(theUserAvatar.attr('src') == ('images/userDefaultMan.png')){
                 theUserAvatar.attr('src', 'images/userEat1.png');
@@ -725,8 +722,6 @@
                 }
                 money -= 20;
                 panjangPlay -= nambah;
-                //panjangEat -= nambah2;
-
             }
             else if(panjangEat > 98){
                 panjangEat = 100;
@@ -774,6 +769,7 @@
             if(jam >= 24){
                 jam -= 24;
             }
+            
             // Avatar settings
             if(theUserAvatar.attr('src') == ('images/userDefaultMan.png')){
                 theUserAvatar.attr('src', 'images/userPlay1.png');
