@@ -15,6 +15,8 @@
         }
         body{
             background-image: url("images/backgroundWebsite.png");
+            background-repeat: no-repeat;
+            background-size: cover;
             padding-top: 46px;
             font-family: 'Poppins', sans-serif;
         }
@@ -45,27 +47,27 @@
         #title h1{
             color: white;
             font-weight: bold;
-            font-size: 71px;
+            font-size: clamp(40px, 3.5vw, 71px);
         }
         #title h1 span{
             font-weight: 500;
         }
         #subtitle p{
             color: white;
-            font-size: 21px;
+            font-size: clamp(18px, 3.5vw, 21px);
         }
         #buttonHeader{
             background-color: white;
             font-size: 18px;
             border: 1px solid gray;
-            width: 248px;
+            width: 200px;
         }
         #firstSection{
             margin-top: 100px;
         }
         #firstSelectionTitle h1{
             font-weight: bold;
-            font-size: 48px;
+            font-size: clamp(28px, 3.5vw, 48px);
         }
         #firstSelectionTitle h1 span{
             font-weight: 500;
@@ -74,20 +76,20 @@
             font-size: 22px;
         }
         #left{
-            padding: 130px 55px;
+            padding: 10px 55px;
         }
         #secondSection{
             margin-top: 100px;
         }
         #secondSelectionTitle h1{
             font-weight: bold;
-            font-size: 48px;
+            font-size: clamp(28px, 3.5vw, 48px);
         }
         #subSecond p{
             font-size: 18px;
         }
         #theRight{
-            padding: 30px 55px;
+            padding: 10px 55px;
         }
         #credits{
             margin-top: 100px;
@@ -128,7 +130,6 @@
         .badge{
             font-size: 20px;
         }
-
     </style>
 </head>
 <body>
@@ -152,32 +153,32 @@
             <div id="subtitle">
                 <p>It's all about UMN student simulation</p>
             </div>
-            <button onclick="buttonClick()" id="buttonHeader" type="button" class="btn rounded-pill mt-5">Enter</button>
+            <button onclick="buttonClick()" id="buttonHeader" type="button" class="btn rounded-pill mt-5">Enter</butto>
         </div>
-        <div id="firstSection" class="d-flex">
-            <div id="left">
+        <div id="firstSection" class="d-lg-flex">
+            <div id="left" class="container-fluid my-auto">
                 <div id="firstSelectionTitle">
-                     <h1>What is UMN<span>Life</span>?</h1>
+                    <h1 class="mx-auto">What is UMN<span>Life</span>?</h1>
                 </div>
                 <div id="subFirst" class="mt-4">
                     <p>It is a simulation that is specially designed to resemble the life of UMN students. You will experience the daily struggles that UMN students face until graduation.</p>
                 </div>
             </div>
-            <div id="right">
-                <img class="h-md-25" src="images/sectionOne.png" alt="sectionOne">
+            <div id="right" class="container-fluid">
+                <img class="img-fluid" src="images/sectionOne.png" alt="sectionOne">
             </div>
         </div>
-        <div id="secondSection" class="d-flex">
-            <div id="theLeft">
-                <img src="images/sectionTwo.png" alt="sectionTwo">
+        <div id="secondSection" class="d-xl-flex">
+            <div id="theLeft" class="mx-auto">
+                <img id="img2" class="mx-auto my-auto" src="images/sectionTwo.png" alt="sectionTwo">
             </div>
             <div id="theRight">
                 <div id="secondSelectionTitle">
-                    <h1>How to Play?<span class="badge bg-danger ms-4 text-center">Important!</span></h1>
+                    <h1 class="mx-auto">How to Play?<span class="badge bg-danger ms-4 text-center">Important!</span></h1>
                 </div>
                 <div id="subSecond" class="mt-4">
                     <p>
-                        The current status of your character is shown by each bar. Overtime, the bar will get lower. To increase it click the button next to the bar. Each bar also affects other bars (as seen by the yellow bar), so make sure it's balanced. <span style="font-weight: bold;">There's a time jump when you increase activities.</span> You will earn money every minute (in game time) and<b> certain action requires money</b>. Use your money wisely or else you will be bankrupt! In this simulation, <b>you can choose</b> to have a partner but beware having a partner is not always a good choice in college life.You also have to keep studying, otherwise you will get dropped out. The simulation will end if your character is ravenous, is sleep deprived, go broke, or is stressed out. To finish the simulation, you have to keep studying until you pass semester 8, just like in real life.
+                        The current status of your character is shown by each bar. Overtime, the bar will get lower. To increase it, click the button next to the bar. Each bar also affects other bars (as seen by the yellow bar), so make sure it's balanced. <span style="font-weight: bold;">There's a time jump when you increase activities.</span> You will earn money every minute (in game time) and<b> certain action requires money</b>. Use your money wisely or else you will be bankrupt! In this simulation, <b>you can choose</b> to have a partner but beware having a partner is not always a good choice in college life. You also have to keep studying, otherwise you will get dropped out. The simulation will end if your character is ravenous, is sleep deprived, go broke, or is stressed out. To finish the simulation, you have to keep studying until you pass semester 8, just like in real life.
                     </p>
                 </div>
             </div>
@@ -187,7 +188,7 @@
             <div id="judul">
                 <h1>Credits</h1>
             </div>
-            <div id="peopleList" class="d-flex justify-content-center">
+            <div id="peopleList" class="d-xl-flex justify-content-center">
                 <div class="square">
                     <div id="peopleImg">
                         <img src="images/aldrik.png" alt="">

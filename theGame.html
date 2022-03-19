@@ -11,7 +11,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
         body{
             padding-bottom: 150px;
-            padding-top: 46px;
             font-family: 'Poppins', sans-serif;
             text-align: center;
             background-repeat: no-repeat;
@@ -33,7 +32,7 @@
         }
         #greeting h1{
             text-align: center;
-            font-size: 80px;
+            font-size: clamp(50px, 3.5vw, 80px);
             font-weight: bold;
         }
         #greetingQuotes{
@@ -42,29 +41,22 @@
         #greetingQuotes h5{
             text-align: center;
             font-weight: normal;
-            font-size: 22px;
-            width: 600px;
+            font-size: clamp(15px, 3.5vw, 22px);
+            width: 50%;
             margin: 0 auto;
         }
         #time{
             text-align: center;
-            margin-top: 59px;
+            margin-top: 4%;
         }
         #time h3{
             text-align: center;
-            font-size: 60px;
+            font-size: clamp(50px, 3.5vw, 60px);
             font-weight: normal;
         }
-        #aboveMiddle{
-            margin-top: 40px;
-        }
-        #userActivity{
-            font-size: 24px;
-            font-weight: 500;
-        }
-        #middleSection{
+        /* #middleSection{
             margin-top: 20px;
-        }
+        } */
         #progressBarSection{
             background-color: white;
             width: 425px;
@@ -213,8 +205,8 @@
                 <h3 id="menit"></h3><h3 id="detik"></h3>
             </div>
         </div>
-        <div id="middleSection" class="d-lg-flex justify-content-lg-center justify-content-md-between d-md-inline-block">
-            <div id="progressBarSection" class="mx-2">
+        <div id="middleSection" class="d-lg-flex justify-content-center text-center">
+            <div id="progressBarSection" class="mx-auto my-3">
                 <div id="title">
                     <h4 style="font-weight: bold;">Activity</h4>
                 </div>
@@ -274,7 +266,7 @@
                     </div>
                 </div>
             </div>
-            <div id="profileSection" class="mx-2">
+            <div id="profileSection" class="mx-auto my-3">
                 <div id="title">
                     <h4 style="font-weight: bold;">Profile</h4>
                 </div>
@@ -285,7 +277,7 @@
                     <p id="userP">"Ahhhh-hhaaaaaa... What time is it?"</p>
                 </div>
             </div>
-            <div id="statusSection" class="mx-2">
+            <div id="statusSection" class="mx-auto my-3">
                 <div id="title">
                     <h4 style="font-weight: bold;">Status</h4>
                 </div>
@@ -411,7 +403,7 @@
         else if(majorReceive == 'Architecture'){
             $('#major').html(`<p><b>Major</b>: ${majorReceive.toUpperCase()} ✏️</p>`);
         }
-        else if(majorReceive == 'Depatrment of Hotel Operations'){
+        else if(majorReceive == 'Department of Hotel Operations'){
             $('#major').html(`<p><b>Major</b>: ${majorReceive.toUpperCase()} 🛎️</p>`);
         }
 
@@ -478,16 +470,16 @@
             }
             
             //Dropped out function
-            if(panjangStudy == 0){
-                noStudy += 1;
-                if(noStudy == 15){
-                    alert("You will be dropped out soon! So please do you homework!");   
-                }
-                if(noStudy == 25){
-                    alert("You just got dropped out! Sorry :)");
-                    window.location.href = 'theDroppedout.html';
-                }
-            }
+            // if(panjangStudy == 0){
+            //     noStudy += 1;
+            //     if(noStudy == 15){
+            //         alert("You will be dropped out soon! So please do you homework!");   
+            //     }
+            //     if(noStudy == 25){
+            //         alert("You just got dropped out! Sorry :)");
+            //         window.location.href = 'theDroppedout.html';
+            //     }
+            // }
             money += 10;
             $("#money").html(`<p><b>Money</b>: $${money}</p>`);
             
@@ -538,11 +530,11 @@
         }
 
         //Time settings for the progress bars
-        setInterval(kurangEat, 1000);
-        setInterval(kurangPlay, 1000);
-        setInterval(kurangRomance, 10000);
-        setInterval(kurangSleep, 1000);
-        setInterval(kurangStudy, 15000);
+        // setInterval(kurangEat, 1000);
+        // setInterval(kurangPlay, 1000);
+        // setInterval(kurangRomance, 10000);
+        // setInterval(kurangSleep, 1000);
+        // setInterval(kurangStudy, 15000);
 
         function kurangEat(){
             let selisih = 0.15;
