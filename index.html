@@ -89,7 +89,7 @@
             font-size: 18px;
         }
         #theRight{
-            padding: 10px 55px;
+            padding: 90px 55px;
         }
         #credits{
             margin-top: 100px;
@@ -128,7 +128,7 @@
             background-color: #003D73;
         }
         .badge{
-            font-size: 20px;
+            font-size: clamp(20px, 3.5vw, 14px);
         }
     </style>
 </head>
@@ -164,23 +164,24 @@
                     <p>It is a simulation that is specially designed to resemble the life of UMN students. You will experience the daily struggles that UMN students face until graduation.</p>
                 </div>
             </div>
-            <div id="right" class="container-fluid">
+            <div id="right" class="container-fluid d-flex">
                 <img class="img-fluid" src="images/sectionOne.png" alt="sectionOne">
             </div>
         </div>
         <div id="secondSection" class="d-xl-flex">
-            <div id="theLeft" class="mx-auto">
-                <img id="img2" class="mx-auto my-auto" src="images/sectionTwo.png" alt="sectionTwo">
+            <div id="theLeft" class="container-fluid d-flex">
+                <img id="img2" class="mx-auto my-auto img-fluid" src="images/sectionTwo.png" alt="sectionTwo">
             </div>
-            <div id="theRight">
+            <div id="theRight" class="container-fluid">
                 <div id="secondSelectionTitle">
-                    <h1 class="mx-auto">How to Play?<span class="badge bg-danger ms-4 text-center">Important!</span></h1>
+                    <h1 class="mx-auto">How to Play?<span id="badge" class="badge bg-danger ms-4 text-center">Important!</span></h1>
                 </div>
                 <div id="subSecond" class="mt-4">
                     <p>
-                        The current status of your character is shown by each bar. Overtime, the bar will get lower. To increase it, click the button next to the bar. Each bar also affects other bars (as seen by the yellow bar), so make sure it's balanced. <span style="font-weight: bold;">There's a time jump when you increase activities.</span> You will earn money every minute (in game time) and<b> certain action requires money</b>. Use your money wisely or else you will be bankrupt! In this simulation, <b>you can choose</b> to have a partner but beware having a partner is not always a good choice in college life. You also have to keep studying, otherwise you will get dropped out. The simulation will end if your character is ravenous, is sleep deprived, go broke, or is stressed out. To finish the simulation, you have to keep studying until you pass semester 8, just like in real life.
+                        The current status of your character is shown by each bar. Overtime, the bar will get lower. To increase it, click the button next to the bar. Each bar also affects other bars (as seen by the yellow bar), so make sure it's balanced. <span style="font-weight: bold;">There's a time jump when you increase activities.</span> You will...
                     </p>
                 </div>
+                <button onclick="buttonClickTutorial()" type="button" class="btn btn-warning rounded-pill mt-5" style="border: 1px solid rgb(201, 201, 201);">Continue Reading</button>
             </div>
         </div>
         <hr class="mt-5 mb-5">
@@ -207,14 +208,14 @@
                     <div id="peopleImg">
                         <img style="border: 1px solid rgb(207, 207, 207);" class="rounded-circle" src="images/farion.png" alt="">
                     </div>
-                    <h3>Farion<br>Tekkry</h3>
+                    <h3>Farion Tekkry</h3>
                     <p>00000056034</p>
                 </div>
                 <div class="square">
                     <div id="peopleImg">
                         <img src="images/daffa.png" alt="">
                     </div>
-                    <h3>Daffa<br>Akbari</h3>
+                    <h3>Daffa Akbari</h3>
                     <p>00000055736</p>
                 </div>
             </div>
@@ -237,8 +238,10 @@
     function buttonClick(){
         window.location.href = 'play.html';
     }
-
-
+    function buttonClickTutorial(){
+        window.location.href = 'howtoplay.html';
+    }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
